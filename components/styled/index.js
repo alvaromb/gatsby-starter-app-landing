@@ -1,3 +1,5 @@
+/* @flow */
+
 import styled, { injectGlobal, css } from 'styled-components';
 import { darken, lighten } from 'polished';
 import { Link } from 'react-router';
@@ -10,17 +12,14 @@ injectGlobal`
   @import url('https://fonts.googleapis.com/css?family=Slabo+27px');
 
   body {
-    font-family: 'Slabo 27px', serif;
-    color: palevioletred;
-    background: papayawhip;
-    text-align: center;
+    font-family: 'Avenir Next', serif;
+    margin: 0px;
   }
 
   a {
-    color: palevioletred;
-
+    color: #F09819;
     &:hover, &:focus, &:visited {
-      color: palevioletred;
+      color: #EDDE5D;
     }
   }
 `;
@@ -31,10 +30,10 @@ injectGlobal`
 const media = {
   tablet: (...args) => css`
     @media (min-width: 420px) {
-      ${ css(...args) }
+      ${css(...args)}
     }
   `
-}
+};
 
 /*
  * Wrapper
@@ -42,25 +41,67 @@ const media = {
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  marginTop: 0px;
+`;
+
+/*
+ * App info container
+ */
+export const AppInfoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 15%;
+`;
+
+/*
+ * Left container
+ */
+export const AppIconContainer = styled.div`
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  margin-top: 12.5%;
+`;
+
+/*
+ * App icon
+ */
+export const AppIcon = styled.div`
+  background:url('./icon.png') no-repeat top left;
+  background-size: 120px 120px;
+  border: 0;
+  height: 120px;
+  width: 120px;
+`;
+
+/*
+ * App title
+ */
+export const AppTitle = styled.h1`
+  font-family: 'Avenir Next';
+  font-weight: 600;
+  color: white;
+  font-size: 48px;
+  margin-left: 25px;
 `;
 
 /*
  * Title
  */
- export const Title = styled.h1`
-   font-size: 30px;
-   text-decoration: underline;
- `;
+export const Title = styled.h1`
+  font-size: 30px;
+  text-decoration: underline;
+`;
 
 /*
  * Subtitle
  */
 export const Subtitle = styled.h2`
-  font-size: 20px;
-  margin-top: 5px;
+  font-size: 28px;
+  margin-top: 25px;
   margin-bottom: 20px;
+  color: white;
+  font-weight: 400;
+  text-align: left;
 `;
 
 /*
@@ -79,10 +120,10 @@ export const StyledLink = styled(Link)`
 /*
  * StyledAnchor
  */
- export const StyledAnchor = styled.a`
-   color: palevioletred;
-   font-size: 18px;
- `;
+export const StyledAnchor = styled.a`
+  color: palevioletred;
+  font-size: 18px;
+`;
 
 /*
  * Message
@@ -171,9 +212,9 @@ export const Input = styled.input`
  */
 export const Text = styled.p`
   font-size: ${props => props.fontSize || '16px'};
-  ${ media.tablet`
+  ${media.tablet`
     font-size: 20px;
-  ` }
+  `}
 `;
 
 /*
@@ -214,9 +255,9 @@ export const PostTitle = styled.h1`
 export const PostBody = styled.div`
  padding: 0px 50px;
  font-size: 17px;
- ${ media.tablet`
+ ${media.tablet`
    font-size: 20px;
- ` }
+ `}
 `;
 
 /*
@@ -235,9 +276,15 @@ export const From = styled.div`
   bottom: 8px;
   right: 8px;
   font-size: 13px;
+  text-align: right;
+  color: dimgrey;
 
   a {
     text-decoration: none;
     font-weight: bolder;
+  }
+
+  span {
+    color: gainsboro;
   }
 `;
