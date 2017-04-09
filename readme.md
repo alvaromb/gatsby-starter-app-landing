@@ -1,6 +1,6 @@
 <h1 align="center">📲 App Landing</h1>
 
-<p align="center">A <a href="https://github.com/gatsbyjs/gatsby" target="_blank">Gatsby</a> starter with <a href="https://styled-components.com/" target="_blank">styled-components 💅</a>, based on [gatsby-starter-superstylin](https://github.com/bntzio/gatsby-starter-superstylin) that provides an app download landing page.</p>
+<p align="center">A <a href="https://github.com/gatsbyjs/gatsby" target="_blank">Gatsby</a> starter with <a href="https://styled-components.com/" target="_blank">styled-components 💅</a>, based on <a href="https://github.com/bntzio/gatsby-starter-superstylin">gatsby-starter-superstylin</a> that provides an app download landing page.</p>
 
 ## 🚧 Project status
 This project is currently being actively developed and it's not stable yet.

@@ -1,4 +1,4 @@
-siteTitle="Superstylin'"
-siteDescription="A Gatsby starter with styled-components"
+siteTitle="App Landing"
+siteDescription="A Gatsby starter for mobile app download pages"
 
-linkPrefix = "/gatsby-starter-superstylin"
+linkPrefix = "/gatsby-starter-app-landing"
